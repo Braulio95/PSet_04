@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --main-bg-color: rgb(13 19 35);
+    --main-txt-color: white;
+    --prof-name-color: rgb(87 70 234);
+    --prof-info-color: rgb(29 32 75);
+    --type-work: #F08030;
+    --type-play: aqua;
+    --type-study: #C03028;
+    --type-excercise: #78C850;
+    --type-social: #7038F8;
+    --type-selfcare: #F8D030;
+}
+.Work{
+    background-color: var(--type-work);
+}
+.Play{
+    background-color: var(--type-play);
+}
+.Study{
+    background-color: var(--type-study);
+}
+.Exercise{
+    background-color: var(--type-excercise);
+}
+.Social{
+    background-color: var(--type-social);
+}
+.Self{
+    background-color: var(--type-selfcare);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: 'Rubik', sans-serif;
+    color: var(--main-txt-color);
+}
+body{
+    background-color: var(--main-bg-color) ;
+}
+main{
+    min-height: 100vh;
+    display: flex;
+}
+section.items{
+    margin: auto;
+    height: min-content;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    gap: 1.6rem;
+}
+img{
+    width: 4.5rem;
+    border-radius: 100vmax;
+    border: 0.3rem solid white;
+}
+div.user{
+    position: relative;
+    isolation: isolate;
+    overflow: inherit;
+    min-width: min-content;
+}
+div.name{
+    background-color: var(--prof-name-color);
+    padding-block: 3rem;
+    padding-inline: 1.5rem;
+    padding-bottom: 5rem;
+    border-radius: 1vmax;
+    min-width: min-content;
+}
+figure{
+    margin-block: 1.5rem;
+}
+p.report{
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+p.name{
+    font-size: 3rem;
+    font-weight: 100;
+}
+div.info{
+    width: 100%;
+    background-color: var( --prof-info-color);
+    position: absolute;
+    padding-top: 4.5rem;
+    padding-bottom: 1.5rem;
+    top: 57%;
+    z-index: -1;
+    border-radius: 1vmax;
+    display: flex;
+    flex-direction: column;
+
+}
+div.info > p {
+    padding-inline: 1.5rem;
+    padding-block: 1rem;
+    margin: 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+    max-width: min-content;
+}
+div.itemslist{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+}
+div.activity{
+    position: relative;
+}
+div.activitybg{
+    border-radius: 1vmax;
+    padding-top: 2.3rem;
+}
+div.activityinfo{
+    background-color: var(--prof-info-color);
+    border-radius: 1vmax;
+    padding: 0.3rem;
+}
+div.activityname{
+    display: flex;
+    padding-bottom: 1.5rem;
+}
+div.hourscurr{
+    font-size: 4.5rem;
+    padding-block: 1.5rem;
+    font-weight: 100;
+}
+div.lasthour{
+    font-size: 1.2rem;
+    padding-block: 1.5rem;
+    font-weight: 100;
+}
