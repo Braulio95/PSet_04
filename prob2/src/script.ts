@@ -14,7 +14,7 @@ set the elements of the matrix at the given position (i,j)
 add two matrices. If the matrices cannot be added log, "NOOP"
 multiplying the two matrices*/
 
-class Matrix {
+class Matrix { //Declaration of the class, it has the properties rows columns and the matrix itself, in the constructor it builts itself with de rows and columns recieved and fills itelf with 0s
     rows: number;
     columns: number;
     matrix: number[][];
@@ -33,12 +33,12 @@ class Matrix {
         }
     }
   
-    setValue(row: number, column: number, value: number) {
+    setValue(row: number, column: number, value: number) { //This method allows to set a value in an especific position
         if (row < this.rows && column < this.columns) {
             this.matrix[row][column] = value;
         }
     }
-    setRandomValues() {
+    setRandomValues() { //This method fills the matrix with random positive numbers
         for (let i = 0; i < this.rows; i++) {
             for (let j = 0; j < this.columns; j++) {
                 let randomnum = Math.random() * 10;
@@ -48,8 +48,8 @@ class Matrix {
       }
   
     addMatrix(otherMatrix: Matrix): Matrix | null{
-        if (this.rows !== otherMatrix.rows || this.columns !== otherMatrix.columns) {
-            console.log("NOOP");
+        if (this.rows !== otherMatrix.rows || this.columns !== otherMatrix.columns) { //Method for adding matrixes, first check that the matrix has same dimensions
+            console.log("NOOP"); //If dimensions are not the same prints this message and returns a null value
             return null
         }else{
             const newMatrix = new Matrix(this.rows, this.columns);
@@ -61,7 +61,7 @@ class Matrix {
                 return newMatrix;
             }
         }
-    multMatrix(otherMatrix: Matrix): Matrix | null{
+    multMatrix(otherMatrix: Matrix): Matrix | null{  //Method for mult matrixes, if the columns of the first matrix equal the rows of the second matrix then the operation is done
         if (this.columns !== otherMatrix.rows) {
           console.log("NOOP");
           return null
@@ -73,7 +73,7 @@ class Matrix {
                     for (let k = 0; k < this.columns; k++) {
                         sum += this.matrix[i][k] * otherMatrix.matrix[k][j];
                     }
-                newMatrix.matrix[i][j] = sum;
+                    newMatrix.matrix[i][j] = sum;
                 }
 
             }
