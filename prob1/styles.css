@@ -51,6 +51,12 @@ section.items{
     grid-template-columns: 25% 75%;
     gap: 1.6rem;
 }
+@media screen and (max-width: 650px) {
+    section.items{
+        grid-template-columns: 1fr;
+        grid-template-rows: 25% 75%;
+    }
+  }
 img{
     width: 4.5rem;
     border-radius: 100vmax;
@@ -102,12 +108,18 @@ div.info > p {
     cursor: pointer;
     max-width: min-content;
 }
+
 div.itemslist{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 1rem;
 }
+@media screen and (max-width: 650px) {
+    div.itemslist{
+        grid-template-columns: 1fr;
+    }
+  }
 div.activity{
     position: relative;
 }
